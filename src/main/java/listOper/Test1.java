@@ -38,8 +38,6 @@ public class Test1 {
         b21.forEach(book -> System.out.println("方式二 list<Integer> : "+ book));
 
 
-
-
     }
 
 
