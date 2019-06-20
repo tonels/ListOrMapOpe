@@ -1,6 +1,5 @@
 package listOper;
 
-import com.sun.tools.corba.se.idl.constExpr.GreaterThan;
 import lombok.val;
 import model.Book;
 
