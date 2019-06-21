@@ -22,7 +22,6 @@ public class List_map {
         Book b5 = new Book().setBookId(5).setBookName("g周一十五").setPrice(56);
 
         List<Book> list= Arrays.asList(b1, b2, b3, b4, b5);
-
         mapTest(list);
 
     }
