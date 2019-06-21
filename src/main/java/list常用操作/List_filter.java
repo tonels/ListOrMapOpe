@@ -21,6 +21,7 @@ public class List_filter {
     }
 
     // 方式一
+
     private static void filterTest(List<Book> list) {
         List<Book> temp = new ArrayList<Book>();
         for(Book b:list) {
@@ -28,13 +29,15 @@ public class List_filter {
                 temp.add(b);
             }
         }
-        temp.forEach(System.Out::print);
-    // 方式二
+        temp.forEach(System.out::print);
+        System.out.println("*********************************************************");
+        // 方式二
         final List<Book> collect = list.stream()
-                .filter(b -> (b.getPrice() > 26))
+                .filter(b -> (b.getPrice() > 26) && b.getBookName().startsWith("a"))
                 .collect(Collectors.toList());
-        collect.forEach(System.Out::print);
-        
+        collect.forEach(System.out::print);
+        System.out.println("*********************************************************");
+
     // 方式三
         List<Book> collect1 = list.stream()
                 .filter(b ->{
@@ -43,7 +46,8 @@ public class List_filter {
                     }
                     return false;
                 }).collect(Collectors.toList());
-       collect1.forEach(System.Out::print);
+       collect1.forEach(System.out::print);
+        System.out.println("*********************************************************");
     }
 
 }
