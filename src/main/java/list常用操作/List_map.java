@@ -52,5 +52,4 @@ public class List_map {
                 .collect(Collectors.toList());
         System.out.println("collect2 = " + collect2);
     }
-
 }
