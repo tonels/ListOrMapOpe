@@ -46,10 +46,10 @@ public class List_map {
                 .collect(Collectors.toList());
         System.out.println("collect1.map = "+collect1);
 
-        List<String> collect2 = list
-                .stream()
+        List<String> collect2 = list.stream()
                 .map(p->{return p.getBookName();})
                 .collect(Collectors.toList());
         System.out.println("collect2 = " + collect2);
     }
+
 }
