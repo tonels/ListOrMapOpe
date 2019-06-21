@@ -6,6 +6,11 @@ import java.util.*;
 import java.util.stream.Collectors;
 import java.util.stream.Stream;
 
+/**
+ * reduce 操作有三个重载方法，稍微复杂点
+ *
+ *
+ */
 public class List_reduce {
 
     public static void main(String[] args) {
@@ -18,104 +23,9 @@ public class List_reduce {
 
         List<Book> list= Arrays.asList(b1, b2, b3, b4, b5);
 
-//        filterTest(list);
-//        mapTest(list);
-        flatMapTest(list);
-//        reduceTest();
-//        collectTest(list);
-
-
+        reduceTest();
     }
 
-    private static void println(List<Book> list) {
-        for(Book b:list) {
-            System.out.println(b.getBookId()+"-"+b.getBookName()+"-"+b.getPrice());
-        }
-    }
-
-    // filter age > 13 and name = d
-    private static void filterTest(List<Book> list) {
-        List<Book> temp = new ArrayList<Book>();
-        for(Book b:list) {
-            if (b.getPrice() > 26 ){
-                temp.add(b);
-            }
-        }
-        println(temp);
-
-        final List<Book> collect = list.stream()
-                .filter(b -> (b.getPrice() > 26))
-                .collect(Collectors.toList());
-        println(collect);
-
-        List<Book> collect1 = list.stream()
-                .filter(b ->{
-                    if (b.getPrice() > 26 ) {
-                        return true;
-                    }
-                    return false;
-                }).collect(Collectors.toList());
-        println(collect1);
-    }
-
-
-    // map
-    private static void mapTest(List<Book> list) {
-        List<String> temp = new ArrayList<>();
-        for(Book b:list) {
-            temp.add(b.getBookName());
-        }
-        System.out.println("temp="+temp.toString());
-
-        List<String> collect = list
-                .stream()
-                .map(p->p.getBookName())
-                .collect(Collectors.toList());
-        System.out.println("collect = "+collect);
-
-        List<String> collect1 = list
-                .stream()
-                .map(Book::getBookName)
-                .collect(Collectors.toList());
-        System.out.println("collect1.map = "+collect1);
-
-        List<String> collect2 = list
-                .stream()
-                .map(p->{return p.getBookName();})
-                .collect(Collectors.toList());
-        System.out.println("collect2 = " + collect2);
-    }
-
-    // flatMap
-    private static void flatMapTest(List<Book> list) {
-        List<String> collect = list
-                .stream()
-                .flatMap(Book -> Arrays.stream(Book.getBookName().split(" ")))
-                .collect(Collectors.toList());
-        System.out.println("collect="+collect);
-
-        List<Stream<String>> collect1 = list
-                .stream()
-                .map(Book -> Arrays.stream(Book.getBookName().split(" ")))
-                .collect(Collectors.toList());
-        System.out.println("collect1="+collect1);
-
-        List<String> collect2 = list
-                .stream()
-                .map(Book -> Book.getBookName().split(" "))
-                .flatMap(Arrays::stream)
-                .collect(Collectors.toList());
-        System.out.println("collect2="+collect2);
-
-        List<String> collect3 = list
-                .stream()
-                .map(Book -> Book.getBookName().split(" "))
-                .flatMap(str -> Arrays.asList(str).stream())
-                .collect(Collectors.toList());
-        System.out.println("collect3="+collect3);
-    }
-
-    // reduce
     public static void reduceTest(){
         Integer reduce = Stream.of(1, 2, 3, 4)
                 .reduce(10, (count, item) ->{
@@ -127,54 +37,11 @@ public class List_reduce {
 
         Integer reduce1 = Stream.of(1, 2, 3, 4)
                 .reduce(1, (x, y) -> x + y);
-        System.out.println(reduce1);
+        System.out.println("reduce1 :  " + reduce1);
 
         String reduce2 = Stream.of("1", "2", "3")
                 .reduce("1", (x, y) -> (x + "," + y));
-        System.out.println(reduce2);
+        System.out.println("reduce2 ： " + reduce2);
     }
-
-    /**
-     * toList
-     */
-    public static void collectTest(List<Book> list){
-        List<String> collect = list.stream()
-                .map(Book::getBookName)
-                .collect(Collectors.toList());
-
-        Set<String> collect1 = list.stream()
-                .map(Book::getBookName)
-                .collect(Collectors.toSet());
-
-        Map<String, Double> collect2 = list.stream()
-                .collect(Collectors.toMap(Book::getBookName, Book::getPrice));
-        Map<String, String> collect3 = list.stream()
-                .collect(Collectors.toMap(p->p.getBookName(), value->{
-                    return value+"1";
-                }));
-        for (Map.Entry<String, String> entry : collect3.entrySet()) {
-            System.out.println("key=" + entry.getKey() + ",value=" + entry.getValue());
-        }
-
-        //TreeSet<Book> collect4 = list.stream()
-        //        .collect(Collectors.toCollection(TreeSet::new));
-        //System.out.println(collect4);
-
-        Map<Boolean, List<Book>> collect5 = list.stream()
-                .collect(Collectors.groupingBy(p->"d".equalsIgnoreCase(p.getBookName())));
-        System.out.println(collect5);
-
-        String collect6 = list.stream()
-                .map(p->p.getBookName())
-                .collect(Collectors.joining(",", "{", "}"));
-        System.out.println(collect6);
-
-        List<String> collect7 = Stream.of("1", "2", "3").map(x -> Arrays.asList(x)).reduce(new ArrayList<String>(), (y, z) -> {
-            y.addAll(z);
-            return y;
-        });
-        System.out.println(collect7);
-    }
-
 
 }
