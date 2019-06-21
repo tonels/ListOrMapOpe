@@ -10,7 +10,6 @@ import java.math.BigDecimal;
 @Accessors(chain = true)
 public class Book {
 
-
     private Integer bookId;
 
     private String bookName;
