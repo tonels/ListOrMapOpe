@@ -160,8 +160,7 @@ public class List_1 {
         //        .collect(Collectors.toCollection(TreeSet::new));
         //System.out.println(collect4);
 
-        Map<Boolean, List<Book>> collect5 = list.stream()
-                .collect(Collectors.groupingBy(p->"d".equalsIgnoreCase(p.getBookName())));
+        Map<Boolean, List<Book>> collect5 = list.stream().collect(Collectors.groupingBy(p->"d".equalsIgnoreCase(p.getBookName())));
         System.out.println(collect5);
 
         String collect6 = list.stream()
