@@ -27,6 +27,8 @@ public class List_filter {
             if (b.getPrice() > 26){
                 temp.add(b);
             }
+
+
         }
         temp.forEach(System.out::print);
         System.out.println("*********************************************************");
