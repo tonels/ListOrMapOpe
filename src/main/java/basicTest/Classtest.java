@@ -1,4 +1,4 @@
-package basic;
+package basicTest;
 
 public class Classtest {
     private String name;
