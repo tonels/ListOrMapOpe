@@ -204,4 +204,17 @@ public class List_Bean_Map互转 {
 
 
 
+
+    // list to map 测试三，排序
+    @Test
+    public void listTomap7(){
+        List<Book> collect = list.stream()
+                .sorted(Comparator.comparingDouble(Book::getPrice)).collect(Collectors.toList());
+
+        System.out.println(collect);
+//       {13.3=七武士, 21.3=当跑步时, 26.3=陪你到世界尽头}
+    }
+
+
+
 }
