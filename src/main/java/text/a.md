@@ -1,0 +1,31 @@
+- 一、`There are two hard things in computer science: cache invalidation, naming things, and off-by-one errors. `
+- 二、`“Success is rarely determined by the quality of your ideas. But it is frequently determined by the quality of your execution.” `
+- 三、`“When given a choice, choose the thing that scares you a little. If it's 100% safe, it is holding you back.” `
+- 四、`“Build what you need as you need it, aggressively refactoring as you go along; don't spend a lot of time planning for grandiose, unknown future scenarios. Good software can evolve into what it will ultimately become.” `
+- 五、`“If money doesn’t make you happy, then you probably aren’t spending it right.” `
+- 六、`“We should always be in pursuit of simplicity, in whatever form it takes.” `
+- 七、`“I always suspected that programmers became programmers because they got to play God with the little universe boxes on their desks.” `
+- 八、`“worst team member is the best predictor of how any team performs. It doesn’t seem to matter how great the best member is,” `
+- 九、`“If you give a good idea to a mediocre group, they’ll screw it up. If you give a mediocre idea to a good group, they’ll fix it. Or they’ll throw it away and come up with something else.” `
+- 十、`“Success is rarely determined by the quality of your ideas. But it is frequently determined by the quality of your execution.” `
+- 十一、`“Don't be the guy telling everyone what to do. Be the guy asking all the questions.” `
+- 十二、`“As a software developer, you are your own worst enemy. The sooner you realize that, the better off you’ll be.” `
+- 十三、`“In my experience, the more isolated the developers, the worse the resulting end product. It” `
+- 十四、`“how you spend your money has a strong influence on how happy — or unhappy — it will make you. And, again, there's science behind this.” `
+- 十五、`“Follow the herd instead of your head” `
+- 十六、`“most developers don't test at all! They key in a few values at random and click a few buttons. If they don't get any unhandled exceptions, that code is ready for QA!” `
+- 十七、`“So much of leadership is learning to give a damn about other people, something that we programmers are notoriously bad at.” `
+- 十八、`“The toughest thing in life is not learning a bunch of potentially hypothetically useful stuff, but figuring out what the heck it is you want to do.” `
+- 十九、`“the ultimate unit test is whether or not users want to use your application. All the other tests you write are totally irrelevant until you can get that one to pass.” `
+- 二十、`“Writing code? That's the easy part. Getting your application in the hands of users, and creating applications that people actually want to use—now that's the hard stuff.” `
+- 二十一、`“As we know, There are known knowns. There are things we know we know. We also know There are known unknowns. That is to say We know there are some things We do not know. But there are also unknown unknowns, The ones we don’t know We don’t know.” `
+- 二十二、`“What is, then, the science of happiness? I'll summarize the basic eight points as” `
+- 二十三、`“Despite popular assertions to the contrary, science tells us that money can buy happiness. To a point.” `
+- 二十四、`“Buy experiences instead of things” `
+- 二十五、`“Help others instead of yourself” `
+- 二十六、`“we programmers spend our lives writing code so that our fellow human beings no longer need to write code” `
+- 二十七、`“ Buy many small pleasures instead of few big ones” `
+- 二十八、`“Good thing you’re tagging all those “Low Priority” tasks. God forbid you’d ever lose track of shit that’s not worth doing.” `
+- 二十九、`“The proper monitoring attitude is not to be distrustful, but instead, to show interest in their work.” `
+- 三十、`“ Buy less insurance” `
+- 三十一、`“Let's say I was tasked with determining whether your software project will fail. With the responses to these three questions in hand, I can tell you with almost utter certainty whether your project will fail: How many lines of code will your team write? What kind of software are you building? Do you like your coworkers? That last question isn't a joke. I'm not kidding. Do you like the company of your teammates on a personal level? Do you respect your teammates professionally? If you were starting at another company, would you invite your coworkers along? Do you have spirited team discussions or knock-down, drag-out, last man standing filibuster team arguments? Are there any people on your team you'd "vote off the island" if you could?” `
