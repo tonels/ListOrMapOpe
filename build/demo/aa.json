@@ -1,0 +1,76 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "type": "object",
+  "properties": {
+    "code": {
+      "type": "string",
+      "description": "响应状态码"
+    },
+    "msg": {
+      "type": "string",
+      "description": "响应描述"
+    },
+    "totalPage": {
+      "type": "number",
+      "description": "总页数"
+    },
+    "totalCount": {
+      "type": "number",
+      "description": "总记录数"
+    },
+    "success": {
+      "type": "boolean",
+      "description": "成功与否"
+    },
+    "result": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+
+
+
+          "assetId": {
+            "type": "number",
+            "description": "媒资ID"
+          },
+          "assetName": {
+            "type": "string",
+            "description": "媒资名称"
+          },
+          "startTime": {
+            "type": "string",
+            "description": "开始时间"
+          },
+          "endTime": {
+            "type": "string",
+            "description": "结束时间"
+          },
+          "transTime": {
+            "type": "string",
+            "description": "转码用时"
+          },
+          "transcodes": {
+            "type": "string",
+            "description": "转码参数"
+          },
+          "nodeStatus": {
+            "type": "string",
+            "description": "转码状态"
+          },
+          "failReason": {
+            "type": "string",
+            "description": "失败原因"
+          }
+        },
+        "required": [
+
+
+
+        ]
+      },
+      "description": "响应结果"
+    }
+
+  }
+}
