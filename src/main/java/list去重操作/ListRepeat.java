@@ -19,7 +19,6 @@ public class ListRepeat {
         System.out.println("初始化的list为：");
         initList.forEach(b -> System.out.println(b));
 
-
         System.out.println("distinct1后的的list为：");
         List<Book> books = distinct1(initList);
         books.forEach(b -> System.out.println(b));
