@@ -5,6 +5,7 @@ import lombok.Data;
 import lombok.experimental.Accessors;
 
 import java.math.BigDecimal;
+import java.time.LocalDateTime;
 
 @Data
 @Accessors(chain = true)
@@ -21,5 +22,8 @@ public class Book {
     private double price;
 
     private  BigDecimal deci;
+
+    private LocalDateTime birth;
+
 
 }
