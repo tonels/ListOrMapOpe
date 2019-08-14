@@ -3,48 +3,28 @@
   "items": {
     "type": "object",
     "properties": {
+      "contentId": {
+        "type": "string",
+        "description": "节目ID"
+      },
       "assetId": {
-        "type": "number",
+        "type": "string",
         "description": "媒资ID"
       },
       "assetName": {
         "type": "string",
         "description": "媒资名称"
       },
-      "startTime": {
+      "field_38": {
         "type": "string",
-        "description": "开始时间"
-      },
-      "endTime": {
-        "type": "string",
-        "description": "结束时间"
-      },
-      "transTime": {
-        "type": "string",
-        "description": "转码用时"
-      },
-      "transcodes": {
-        "type": "string",
-        "description": "转码参数"
-      },
-      "nodeStatus": {
-        "type": "string",
-        "description": "转码状态"
-      },
-      "failReason": {
-        "type": "string",
-        "description": "失败原因"
+        "description": "产品"
       }
     },
     "required": [
+      "contentId",
       "assetId",
       "assetName",
-      "startTime",
-      "endTime",
-      "transTime",
-      "transcodes",
-      "nodeStatus",
-      "failReason"
+      "field_38"
     ]
   }
 }

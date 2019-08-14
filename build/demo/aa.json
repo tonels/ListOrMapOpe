@@ -29,38 +29,29 @@
         "properties": {
 
 
-
+          "showId": {
+            "type": "string",
+            "description": "节目ID"
+          },
           "assetId": {
-            "type": "number",
+            "type": "string",
             "description": "媒资ID"
           },
           "assetName": {
             "type": "string",
             "description": "媒资名称"
           },
-          "startTime": {
+          "disposeChannel": {
             "type": "string",
-            "description": "开始时间"
+            "description": "输出平台"
           },
-          "endTime": {
+          "contentID": {
             "type": "string",
-            "description": "结束时间"
+            "description": "内容ID"
           },
-          "transTime": {
+          "disposeTime": {
             "type": "string",
-            "description": "转码用时"
-          },
-          "transcodes": {
-            "type": "string",
-            "description": "转码参数"
-          },
-          "nodeStatus": {
-            "type": "string",
-            "description": "转码状态"
-          },
-          "failReason": {
-            "type": "string",
-            "description": "失败原因"
+            "description": "输出时间"
           }
         },
         "required": [
