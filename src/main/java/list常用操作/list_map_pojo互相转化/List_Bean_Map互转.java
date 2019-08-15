@@ -205,7 +205,7 @@ public class List_Bean_Map互转 {
 
 
 
-    // list to map 测试三，排序
+    // list to List 测试三，排序
     @Test
     public void listTomap7(){
         List<Book> collect = list.stream()
