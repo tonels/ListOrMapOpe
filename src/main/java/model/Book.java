@@ -4,12 +4,13 @@ package model;
 import lombok.Data;
 import lombok.experimental.Accessors;
 
+import java.io.Serializable;
 import java.math.BigDecimal;
 import java.time.LocalDateTime;
 
 @Data
 @Accessors(chain = true)
-public class Book {
+public class Book implements Serializable {
 
     private Integer bookId;
 
