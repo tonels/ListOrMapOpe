@@ -19,32 +19,33 @@
       "items": {
         "type": "object",
         "properties": {
-          "showId": {
-            "type": "number",
-            "description": "节目ID"
+          "AssetInfoVo": {
+            "type": "object",
+            "properties": {
+              "programId": {
+                "type": "string"
+              }
+            },
+            "required": [
+              "field_10"
+            ]
           },
-          "assetId": {
-            "type": "number",
-            "description": "媒资ID"
-          },
-          "assetName": {
-            "type": "string",
-            "description": "媒资名称"
-          },
-          "disposeChannel": {
-            "type": "string",
-            "description": "输出平台"
-          },
-          "contentID": {
-            "type": "number",
-            "description": "内容ID"
-          },
-          "disposeTime": {
-            "type": "string",
-            "description": "输出时间"
+          "locationVo": {
+            "type": "object",
+            "properties": {
+              "field_11": {
+                "type": "string"
+              }
+            },
+            "required": [
+              "field_11"
+            ]
           }
         },
-        "required": []
+        "required": [
+          "AssetInfoVo",
+          "locationVo"
+        ]
       },
       "description": "响应结果"
     }
