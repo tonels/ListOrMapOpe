@@ -86,6 +86,8 @@ public class ListRepeat {
     }
 
 
+
+
     // list去重操作 三
 
     public static List<Book> distinct3(List<Book> list) {
