@@ -21,9 +21,7 @@ public class Table_ {
         studentTable.put("ECE", "20", "Akhil");
         studentTable.put("ECE", "25", "Amrit");
 
-        // get Map corresponding to ECE department
         Map<String, String> eceMap = studentTable.row("ECE");
-
         System.out.println("List of ECE students : ");
 
         for (Map.Entry<String, String> student : eceMap.entrySet()) {
@@ -32,13 +30,10 @@ public class Table_ {
 
         System.out.println();
 
-        // get a Map corresponding to Roll no. 12
         Map<String, String> stuMap = studentTable.column("12");
-
         for (Map.Entry<String, String> student : stuMap.entrySet()) {
             System.out.println("Student Roll No : " + student.getKey() + ", Student Name : " + student.getValue());
         }
     }
-
 
 }

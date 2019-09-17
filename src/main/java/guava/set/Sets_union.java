@@ -1,4 +1,4 @@
-package guava;
+package guava.set;
 
 import com.google.common.collect.Sets;
 import org.junit.Test;

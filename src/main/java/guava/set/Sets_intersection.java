@@ -1,4 +1,4 @@
-package guava;
+package guava.set;
 
 import com.google.common.collect.Lists;
 import com.google.common.collect.Sets;

@@ -1,4 +1,4 @@
-package guava;
+package guava.set;
 
 import com.google.common.collect.Sets;
 import org.junit.Test;
@@ -6,7 +6,6 @@ import org.junit.Test;
 import java.util.Set;
 
 public class Sets_diff {
-
     /**
      * 计算两个List差集，注意A，B集合的差集是不同的
      */
