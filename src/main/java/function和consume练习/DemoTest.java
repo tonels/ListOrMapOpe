@@ -1,6 +1,5 @@
 package function和consume练习;
 
-import com.google.common.cache.RemovalListener;
 import org.junit.Test;
 
 import java.util.ArrayList;
@@ -10,7 +9,7 @@ import java.util.function.Consumer;
 public class DemoTest {
 
     @Test
-    public void t1(){
+    public void t1() {
 
         Consumer listener = a -> System.out.println(a);
 
@@ -21,7 +20,7 @@ public class DemoTest {
                 list.set(i, 2 * list.get(i));
         };
 
-        Consumer<List<Integer> >
+        Consumer<List<Integer>>
                 dispList = list -> list.stream().forEach(a -> System.out.print(a + " "));
 
         List<Integer> list = new ArrayList<Integer>();
@@ -36,9 +35,6 @@ public class DemoTest {
         dispList.accept(list);
 
     }
-
-
-
 
 
 }

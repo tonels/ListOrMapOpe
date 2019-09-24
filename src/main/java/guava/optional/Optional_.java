@@ -1,4 +1,4 @@
-package guava;
+package guava.optional;
 
 import com.google.common.base.Optional;
 import org.junit.Test;
