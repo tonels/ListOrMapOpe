@@ -1,4 +1,4 @@
-package guava;
+package guava.table;
 
 import com.google.common.collect.HashBasedTable;
 import com.google.common.collect.Table;
@@ -6,6 +6,7 @@ import org.junit.Test;
 
 import java.util.Map;
 
+// todo 这是一个二维表的数据结构，一个二维矩阵
 public class Table_ {
     @Test
     public void t1(){
