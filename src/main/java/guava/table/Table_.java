@@ -7,6 +7,8 @@ import org.junit.Test;
 import java.util.Map;
 
 // todo 这是一个二维表的数据结构，一个二维矩阵
+// Table是Guava提供的一个接口 Interface Table(R,C,V)，由rowKey(行)+columnKey(列)+value组成
+// 适用于多个健做索引的场景
 public class Table_ {
     @Test
     public void t1(){
@@ -18,6 +20,7 @@ public class Table_ {
         studentTable.put("CSE", "12", "Sahil");
 
         studentTable.put("ECE", "15", "Ram");
+        studentTable.put("ECE", "12", "Lube");
         studentTable.put("ECE", "18", "Anmol");
         studentTable.put("ECE", "20", "Akhil");
         studentTable.put("ECE", "25", "Amrit");
@@ -36,5 +39,6 @@ public class Table_ {
             System.out.println("Student Roll No : " + student.getKey() + ", Student Name : " + student.getValue());
         }
     }
+
 
 }

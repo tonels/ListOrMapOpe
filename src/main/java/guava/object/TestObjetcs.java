@@ -6,14 +6,14 @@ import lombok.Data;
 import org.junit.Test;
 
 @Data
-class St1{
+class St1 {
     private String name;
     private Integer age;
     private String city;
 }
 
 @Data
-class St2{
+class St2 {
     private String name;
     private Integer age;
     private String city;
@@ -29,7 +29,7 @@ class St2{
 }
 
 @Data
-class St3{
+class St3 {
     private String name;
     private Integer age;
     private String city;
@@ -44,6 +44,7 @@ class St3{
                 .omitNullValues().toString();
     }
 }
+
 public class TestObjetcs {
     @Test
     public void t1() {
@@ -52,23 +53,23 @@ public class TestObjetcs {
 
         final St3 st3 = new St3();
         st3.setAge(12);
-        System.out.println("st3 = " + st3 );
+        System.out.println("st3 = " + st3);
     }
 
     @Test
-    public void t2(){
+    public void t2() {
         final St3 st3 = new St3();
         st3.setName("zhp");
-//        st3.setCity("bj");
+        st3.setCity("bj");
         st3.setAge(19);
         f1(st3);
     }
 
     // todo guava 参数校验
-    public void f1(St3 st3){
+    public void f1(St3 st3) {
         Preconditions.checkNotNull(st3.getName(), "name may not be null");
         Preconditions.checkArgument(st3.getAge() >= 18 && st3.getAge() < 99, "age must in range (18,99)");
-        Preconditions.checkArgument(st3.getCity() !=null && st3.getCity().length() < 10, "desc too long, max length is ",10);
+        Preconditions.checkArgument(st3.getCity() != null && st3.getCity().length() < 10, "desc too long, max length is ", 10);
 
     }
 

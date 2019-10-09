@@ -1,10 +1,10 @@
 package guava.optional;
 
-import com.google.common.base.Optional;
 import org.junit.Test;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Optional;
 
 import static com.google.common.base.Strings.emptyToNull;
 
@@ -26,7 +26,7 @@ public class Optional_ {
     }
 
     // Method to display values using Java Nulls
-    public static void displayValuesUsingJavaNulls(List<String> myList) {
+    private static void displayValuesUsingJavaNulls(List<String> myList) {
         System.out.println("Displaying values using Java Nulls");
         // For every String in myList
         for (String str : myList) {
@@ -41,12 +41,12 @@ public class Optional_ {
     }
 
     // Method to display values using Guava Optional
-    public static void displayValuesUsingGuavaOptional(List<String> myList) {
+    private static void displayValuesUsingGuavaOptional(List<String> myList) {
         System.out.println("Displaying values using Guava Optional");
 
         for (String str : myList) {
-            Optional<String> optionalName = Optional.fromNullable(emptyToNull(str));
-            System.out.println("String : " + optionalName.or("String : Value is empty or not available"));
+            Optional<String> optionalName = Optional.ofNullable(emptyToNull(str));
+            System.out.println("String : " + optionalName.orElse("String : Value is empty or not available"));
         }
     }
 }
