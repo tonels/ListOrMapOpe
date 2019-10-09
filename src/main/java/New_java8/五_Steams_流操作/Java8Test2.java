@@ -1,15 +1,24 @@
 package New_java8.五_Steams_流操作;
 
+import cn.hutool.core.util.StrUtil;
+import com.google.common.collect.Lists;
+import org.junit.Test;
+
 import java.util.*;
 import java.util.stream.Collectors;
 
 public class Java8Test2 {
 
-    public static void main(String args[]) {
+    List<String> strings = Arrays.asList("abc", "", "bc", "efg", "abcd","", "jkl");
+
+    List<Integer> numbers = Arrays.asList(3, 2, 2, 3, 7, 3, 5);
+
+    @Test
+    public void t1(){
         System.out.println("********************************** Using Java 7: **********************************");
 
         // Count empty strings
-        List<String> strings = Arrays.asList("abc", "", "bc", "efg", "abcd","", "jkl");
+
         System.out.println("List: " +strings);
         long count = getCountEmptyStringUsingJava7(strings);
 
@@ -25,7 +34,7 @@ public class Java8Test2 {
         //Eliminate empty string and join using comma.
         String mergedString = getMergedStringUsingJava7(strings,", ");
         System.out.println("Merged String: " + mergedString);
-        List<Integer> numbers = Arrays.asList(3, 2, 2, 3, 7, 3, 5);
+
 
         //get list of square of distinct numbers
         List<Integer> squaresList = getSquares(numbers);
@@ -46,39 +55,51 @@ public class Java8Test2 {
             System.out.println(random.nextInt());
         }
 
-        System.out.println("********************************** Using Java 8: **********************************");
-        System.out.println("List: " +strings);
+    }
 
-        count = strings.stream().filter(string->string.isEmpty()).count();
+    @Test
+    public void t2(){
+
+        long count = strings.stream().filter(string -> string.isEmpty()).count();
         System.out.println("Empty Strings: " + count);
 
         count = strings.stream().filter(string -> string.length() == 3).count();
         System.out.println("Strings of length 3: " + count);
 
-        filtered = strings.stream().filter(string ->!string.isEmpty()).collect(Collectors.toList());
-        System.out.println("Filtered List: " + filtered);
+    }
 
-        mergedString = strings.stream().filter(string ->!string.isEmpty()).collect(Collectors.joining(", "));
-        System.out.println("Merged String: " + mergedString);
+    @Test
+    public void t3(){
 
-        squaresList = numbers.stream().map( i ->i*i).distinct().collect(Collectors.toList());
-        System.out.println("Squares List: " + squaresList);
-        System.out.println("List: " +integers);
+        ArrayList<String> strings = Lists.newArrayList("ai", "aq", "ae", "er", "", "  ", "ffs", null);
+        List<String> filtered = strings.stream().filter(e -> !StrUtil.isBlankIfStr(e)).collect(Collectors.toList());
+        System.out.println("Filtered List: " + filtered.toString());
 
-        IntSummaryStatistics stats = integers.stream().mapToInt((x) ->x).summaryStatistics();
+        String collect = strings.stream().filter(e -> !StrUtil.isBlankIfStr(e)).collect(Collectors.joining(", "));
+        System.out.println("Merged String: " + collect);
 
-        System.out.println("Highest number in List : " + stats.getMax());
-        System.out.println("Lowest number in List : " + stats.getMin());
-        System.out.println("Sum of all numbers : " + stats.getSum());
-        System.out.println("Average of all numbers : " + stats.getAverage());
-        System.out.println("Random Numbers: ");
+        List<Integer> collect1 = numbers.stream().map(i -> i * i).distinct().collect(Collectors.toList());
+        System.out.println("Squares List: " + collect1);
 
-        random.ints().limit(10).sorted().forEach(System.out::println);
+    }
+
+    @Test
+    public void t4(){
+        // 基本统计
+        // IntSummaryStatistics{count=7, sum=25, min=2, average=3.571429, max=7}
+        IntSummaryStatistics stats = numbers.stream().mapToInt((x) ->x).summaryStatistics();
+        System.out.println(stats);
+
 
         //parallel processing
-        count = strings.parallelStream().filter(string -> string.isEmpty()).count();
-        System.out.println("Empty Strings: " + count);
+        ArrayList<String> strings = Lists.newArrayList("ai", "aq", "ae", "er", "", "  ", "ffs", null);
+        long count = strings.parallelStream().filter(e -> !StrUtil.isBlankIfStr(e)).count();
+        System.out.println("非空字符串个数为 ：" + count);
     }
+
+
+
+
 
     private static int getCountEmptyStringUsingJava7(List<String> strings) {
         int count = 0;

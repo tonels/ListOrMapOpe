@@ -38,23 +38,7 @@ public class Java8Tester {
                 .count();
         System.out.println("为空的值有.."+ count+"个");
 
-        System.out.println("******************************************");
-        System.out.println("limit 操作");
-        Random random1 = new Random();
-        random1.ints()
-                .limit(3)
-                .sorted()
-                .forEach(System.out::println);
-        System.out.println("Limit 操作后" + random1.toString());
 
-        System.out.println("******************************************");
-        System.out.println("Parallel Processing 并行处理");
-        List<String> list2 = Arrays.asList("asd", "saf", "", "fd", "hfg", "kjhl", "vb", "ret","asd", "saf", "", "fd", "hfg", "kjhl", "vb", "ret","asd", "saf", "", "fd", "hfg", "kjhl", "vb", "ret","asd", "saf", "", "fd", "hfg", "kjhl", "", "");
-
-        long count1 = list2.parallelStream()
-                .filter(a -> a.isEmpty())
-                .count();
-        System.out.println("为空的值为 ：" + count1);
 
         System.out.println("******************************************");
         System.out.println("Collectors 操作");

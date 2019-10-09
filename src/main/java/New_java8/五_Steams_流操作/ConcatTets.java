@@ -17,8 +17,7 @@ public class ConcatTets {
         // concatenating both the Streams
         // with Stream.concat() function
         // and displaying the result
-        Stream.concat(stream1, stream2)
-                .forEach(element -> System.out.println(element));
+        Stream.concat(stream1, stream2).forEach(element -> System.out.println(element));
     }
 
     @Test

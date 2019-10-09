@@ -26,5 +26,16 @@ public class Book implements Serializable {
 
     private LocalDateTime birth;
 
-
+    @Override
+    public String toString() {
+        return "Book{" +
+                "bookId=" + bookId +
+                ", bookName='" + bookName + '\'' +
+                ", author='" + author + '\'' +
+                ", location='" + location + '\'' +
+                ", price=" + price +
+                ", deci=" + deci +
+                ", birth=" + birth +
+                '}';
+    }
 }
