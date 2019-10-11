@@ -1,4 +1,4 @@
-package 自定义注解;
+package 自定义注解.annotation1;
 
 import java.lang.annotation.ElementType;
 import java.lang.annotation.Retention;

@@ -1,4 +1,4 @@
-package 自定义注解;
+package 自定义注解.annotation1;
 
 import java.lang.annotation.Annotation;
 import java.lang.reflect.Method;

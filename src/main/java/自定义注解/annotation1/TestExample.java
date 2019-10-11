@@ -1,4 +1,4 @@
-package 自定义注解;
+package 自定义注解.annotation1;
 
 @TesterInfo(
         priority = TesterInfo.Priority.HIGH,
