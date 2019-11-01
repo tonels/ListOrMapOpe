@@ -1,12 +1,12 @@
-package list互转;
+package list常用操作.list互转;
 
 import cn.hutool.json.JSONArray;
 import cn.hutool.json.JSONUtil;
 import com.google.common.collect.Lists;
-import list互转.model.Per;
-import list互转.model.PerVo;
-import list互转.model.SyncInfo;
-import list互转.model.SyncRecordVo;
+import list常用操作.list互转.model.Per;
+import list常用操作.list互转.model.PerVo;
+import list常用操作.list互转.model.SyncInfo;
+import list常用操作.list互转.model.SyncRecordVo;
 import org.junit.Test;
 
 import java.time.LocalDateTime;

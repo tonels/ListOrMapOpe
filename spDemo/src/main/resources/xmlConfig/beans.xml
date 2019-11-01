@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+    http://www.springframework.org/schema/beans/spring-beans-3.0.xsd">
+
+    <!--    awareinterfaces-->
+    <bean id="awareBean" class="com.spring_lifecycle.AwareBeanImpl"></bean>
+
+    <bean id="bookBeanPost" class="com.spring_lifecycle.bean.BookBean">
+        <property name="bookName" value="乱世佳人"></property>
+    </bean>
+    <bean id="bookBeanPostProcessor" class="com.spring_lifecycle.BookBeanPostProcessor"/>
+
+    <bean id="bookBean" class="com.spring_lifecycle.bean.Book">
+        <property name="bookName" value="霍乱时期"/>
+    </bean>
+
+    <bean id="customLifeCycleBookBean"
+          class="com.spring_lifecycle.bean.BookCustomBean"
+          init-method="customInit"
+          destroy-method="customDestroy">
+        <property name="bookName" value="Life and Laughing"></property>
+    </bean>
+
+
+
+</beans>

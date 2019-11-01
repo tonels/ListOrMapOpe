@@ -1,4 +1,4 @@
-package list去重操作;
+package list常用操作;
 
 import com.google.common.collect.Lists;
 import model.Book;

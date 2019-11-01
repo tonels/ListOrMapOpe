@@ -1,4 +1,4 @@
-package list互转.model;
+package list常用操作.list互转.model;
 
 import lombok.Data;
 

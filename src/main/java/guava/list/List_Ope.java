@@ -3,7 +3,7 @@ package guava.list;
 import com.google.common.base.Predicates;
 import com.google.common.collect.Iterables;
 import com.google.common.collect.Lists;
-import list互转.model.Per;
+import list常用操作.list互转.model.Per;
 import org.junit.Test;
 
 import java.time.LocalDateTime;
