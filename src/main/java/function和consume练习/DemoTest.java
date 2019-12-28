@@ -14,8 +14,7 @@ public class DemoTest {
         Consumer listener = a -> System.out.println(a);
 
         listener.accept(10);
-        Consumer<List<Integer>> modify = list ->
-        {
+        Consumer<List<Integer>> modify = list -> {
             for (int i = 0; i < list.size(); i++)
                 list.set(i, 2 * list.get(i));
         };
